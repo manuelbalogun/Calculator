@@ -1,0 +1,142 @@
+:root {
+    --clr-dark: #1c2427;
+    --clr-dark-green: #0a6a38;
+    --clr-light-green: #0C8346;
+    --clr-light: #fff;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+}
+
+body {
+    background-color: var(--clr-dark);
+    font-size: 1.125rem;
+    color: var(--clr-light);
+    font-family: 'Inter', sans-serif;
+}
+
+section {
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator_container {
+    height: auto;
+    width: min-content;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.calculator {
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0);
+    border-radius: 16px;
+    overflow: auto;
+}
+
+.calculator_display {
+    background-color: #3A4E48;
+    color: var(--clr-light);
+    padding: 0.75rem 2rem;
+    text-align: right;
+    font-size: 3rem;    
+    font-weight: 600;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator_display span {
+  font-size: 1.5rem;
+  color: #B2BEB5;
+}
+
+.key {
+    background: #99C5B5;
+    color: var(--clr-dark);
+    font-size: 1.2rem;    
+    font-weight: 500;
+    padding: 1.5rem;
+}
+
+.key:hover {
+    background: #fff;
+}
+
+.calculator_keys {
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    grid-template-areas: 
+        ". . . ."
+        "seven eight nine delete"
+        "four five six equal"
+        "one two three equal"
+        "zero decimal clear equal";
+    grid-gap: 0.8px;
+}
+
+.calculator_keys > button {
+    border: 0;
+}
+
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.zero {
+    grid-area: zero;
+}
+.clear {
+    grid-area: clear;
+}
+.decimal {
+    grid-area: decimal;
+    font-weight: 700;
+}
+.delete {
+    grid-area: delete;
+    background-color: orange;
+}
+.delete:hover {
+    background-color: orangered;
+    color: white;
+}
+.equal {
+    grid-area: equal;
+    background-color: var(--clr-light);
+}
+
+.equal:hover {
+    background-color: lightcyan;
+}
+
+.plus,
+.minus,
+.multiply,
+.divide {
+    background-color: lightgray;
+}
